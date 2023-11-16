@@ -1,6 +1,4 @@
 import os
-from numpy.random import randint
-import time
 
 
 def clear_console():
@@ -17,10 +15,8 @@ def sort_the_nested_arrays(array):
         clear_console()
         print("Here is an array with sorted columns:\n")
 
-        start_time = time.time()
         for c in sort_the_columns(array):
             print(c)
-        print("--- %s seconds ---" % (time.time() - start_time))
 
     elif question == "2":
         clear_console()
@@ -52,6 +48,3 @@ def sort_the_rows(array):
         array[i] = sorted(array[i])
 
     return array
-
-
-print(sort_the_nested_arrays([list(randint(0, 50, 100)) for i in range(1, 50)]))
